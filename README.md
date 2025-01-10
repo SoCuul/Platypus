@@ -5,7 +5,7 @@
 
 <img style="float: right; margin-left: 30px; margin-bottom: 20px;" width="196" height="196" src="Documentation/images/platypus.png" align="right">
 
-# Platypus
+# Platypus :)
 
 **Platypus** is a developer tool that creates native Mac applications 
 from command line scripts such as shell scripts or Python, Perl, Ruby, 
