@@ -19,6 +19,13 @@ jobs:
       - run: gem install xcpretty
       - name: Build app
         run: make build_unsigned | xcpretty -c && exit ${PIPESTATUS[0]}
-      # Tests require GUI environment, disabled in CI
-      #- name: Run tests
-      #  run: make clt_tests
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+            name: app
+            path: release.zip
+            # Tests require GUI environment, disabled in CI
+            #- name: Run tests
+            #  run: make clt_tests
